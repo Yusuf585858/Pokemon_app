@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 
 function Home() {
 
-    const [api, setApi] = useState("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=10000");
-    const [pokemon1, setPokemon1] = useState([]);
-    const [input, setInput] = useState("");
+
+    const [allPokemon, setallPokemon] = useState([]);
+    const [api, setApi] = useState('https://pokeapi.co/api/v2/pokemon/?offset=20&limit=10000');
 
     useEffect(() => {
 
@@ -15,24 +15,30 @@ function Home() {
             .then((response) => {
                 return response.json();
             })
-            .then((pokemon1) => {
-                setPokemon1(pokemon1);
-                console.log(pokemon1);
+            .then((allPokemon1) => {
+                setallPokemon(allPokemon1);
+                console.log(allPokemon1);
             });
+
+
     }, []);
 
-
-
-
+    /* if (allPokemon === undefined) return; */
 
 
     return (
         <main>
             <div>
-                <div>
-                    <input onChange={(e) => setInput(e.target.value)} placeholder="type in pokemon"></input>
-                    <button onClick={() => { setApi(``); }}>Search</button>
-                </div>
+                {
+                    allPokemon.results.map((item, index) => {
+                        return (
+                            <div key={index} >
+                                <h1>{item.name}</h1>
+                                <p>{item.url}</p>
+                            </div>
+                        );
+                    })
+                }
             </div>
         </main>
     );
