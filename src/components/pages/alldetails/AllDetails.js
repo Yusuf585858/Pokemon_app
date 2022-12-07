@@ -1,7 +1,6 @@
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-
 function AllDetails(props) {
 
     const location = useLocation();
