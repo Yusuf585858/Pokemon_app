@@ -2,14 +2,9 @@ import './App.css';
 import Home from './components/pages/home/Home';
 import AllDetails from './components/pages/alldetails/AllDetails';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
-
+import PokeCard from './components/pokemoncard/PokeCard';
 
 function App() {
-
-
-
 
   return (
     <div className="App">

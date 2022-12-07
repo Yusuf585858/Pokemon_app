@@ -1,3 +1,4 @@
+import './PokeCard.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AllDetails from '../pages/alldetails/AllDetails';
@@ -20,11 +21,12 @@ function PokeCard(props) {
     }, []);
 
     return (
-        <div>
-            <img src={pokemon?.sprites?.front_default} />
-            <h1>{pokemon?.name}</h1>
-            <p>{pokemon?.id}</p>
-            <Link to={`/AllDetails/${pokemon?.id}`} state={props.url}><button>Details</button></Link>
+        <div className='pokeCardDiv'>
+            <Link to={`/AllDetails/${pokemon?.id}`} state={props.url}><img className='pokeCardImg' src={pokemon?.sprites?.front_default} /></Link>
+            <div className='pokeNameAndPokedex'>
+                <p className='pokeCardP'>#{pokemon?.id}</p>
+                <h1 className='pokecardHeading'>{pokemon?.name}</h1>
+            </div>
         </div>
     );
 
