@@ -1,31 +1,22 @@
-/* import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function AllDetails(props) {
-    const [api, setApi] = useState(props.url);
-    const [poki, setPoki] = useState([]);
 
-    useEffect(() => {
-
-
-        fetch(api)
-            .then((response) => {
-                return response.json();
-            })
-            .then((allPokemon2) => {
-                setPoki(allPokemon2);
-                console.log(allPokemon2);
-            });
-
-
-    }, []);
+    const params = useParams();
+    const clickedPokemon = props.url[params.pokenummer];
+    console.log(clickedPokemon);
 
     return (
-        <div>Test</div>
+        <section>
+            <img src={clickedPokemon.sprites.front_default} alt={"asdf"} ></img>
+            <h1>{clickedPokemon.id} {clickedPokemon.name}</h1>
+        </section>
     );
+
 
 
 }
 
 
-export default AllDetails; */
+export default AllDetails; 
