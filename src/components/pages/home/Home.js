@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import PokeCard from '../../../components/pokemoncard/PokeCard';
 
 
-function Home(props) {
+function Home() {
     const [allPokemon, setallPokemon] = useState([]);
-    const [api, setApi] = useState('https://pokeapi.co/api/v2/pokemon/?offset=20&limit=10000');
+    const [api, setApi] = useState('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10000');
 
     useEffect(() => {
 
@@ -27,7 +27,7 @@ function Home(props) {
                 {
                     allPokemon.map((item, index) => {
                         return (
-                            <PokeCard url={item.url} />
+                            <PokeCard key={index} url={item.url} />
                         );
                     })
                 }

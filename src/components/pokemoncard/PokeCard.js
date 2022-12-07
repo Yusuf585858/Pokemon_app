@@ -19,7 +19,9 @@ function PokeCard(props) {
 
     return (
         <div>
-            <img src={sprites.front_default} />
+            <img src={pokemon?.sprites?.front_default} />
+            <h1>{pokemon?.name}</h1>
+            <p>{pokemon?.id}</p>
         </div>
     );
 

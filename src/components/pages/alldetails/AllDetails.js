@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+/* import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function AllDetails(props) {
@@ -28,4 +28,4 @@ function AllDetails(props) {
 }
 
 
-export default AllDetails;
+export default AllDetails; */
