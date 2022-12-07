@@ -28,7 +28,7 @@ function AllDetails(props) {
             <img className='imgStyle' src={scheissBild} />
             <input className='inputStyle' placeholder='Search Pokemon'></input>
             <div className='scheissDiv'>
-                <img className='pokeIMG' src={pokemon?.sprites?.front_default} />
+                <img className='pokeIMG' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon?.id}.png`} />
             </div>
             <h1 className='indexStyle'>{pokemon?.name}</h1>
 

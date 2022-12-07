@@ -22,7 +22,7 @@ function PokeCard(props) {
 
     return (
         <div className='pokeCardDiv'>
-            <Link to={`/AllDetails/${pokemon?.id}`} state={props.url}><img className='pokeCardImg' src={pokemon?.sprites?.front_default} /></Link>
+            <Link to={`/AllDetails/${pokemon?.id}`} state={props.url}><img className='pokeCardImg' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon?.id}.png`} /></Link>
             <div className='pokeNameAndPokedex'>
                 <p className='pokeCardP'>#{pokemon?.id}</p>
                 <h1 className='pokecardHeading'>{pokemon?.name}</h1>
