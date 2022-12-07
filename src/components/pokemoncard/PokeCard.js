@@ -24,7 +24,7 @@ function PokeCard(props) {
             <img src={pokemon?.sprites?.front_default} />
             <h1>{pokemon?.name}</h1>
             <p>{pokemon?.id}</p>
-            <Link to={`/AllDetails/${pokemon?.id}`}><button>Details</button></Link>
+            <Link to={`/AllDetails/${pokemon?.id}`} state={props.url}><button>Details</button></Link>
         </div>
     );
 

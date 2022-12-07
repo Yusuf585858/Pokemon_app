@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/type" element={<Type />} /> */}
-          <Route path="/allDetails/:pokenummer" element={<AllDetails />} />
+          <Route path="/allDetails/:id" element={<AllDetails />} />
           {/* <Route path="/details" element={<Details />} /> */}
         </Routes>
       </Router>
