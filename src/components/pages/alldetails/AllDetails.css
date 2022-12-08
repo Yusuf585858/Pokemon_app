@@ -1,14 +1,15 @@
 .secStyle {
     height: 90vh;
-    width: 50%;
+    width: 400px;
     margin: 20px auto;
     background-color: #CCDADD;
-
+    border: 1px solid transparent;
+    border-radius: 20px
 }
 
 .imgStyle {
     width: 300px;
-    margin: 0 auto;
+    margin: 25px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,19 +29,20 @@
 }
 
 .scheissDiv {
-    height: 50px;
-    width: 305px;
-    background-color: yellow;
+    height: 150px;
+    width: 350px;
+    /* background-color: #FFCB05; */
+    background-image: linear-gradient(52.41deg, #FFE1C6 4.87%, #FFCB05 94.37%);
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
     border: 1px solid transparent;
     border-radius: 20px;
     position: relative;
 }
 
 .pokeIMG {
-    width: 305px;
-    margin: 0 auto;
+    max-width: 350px;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,5 +54,38 @@
 .indexStyle {
     text-align: center;
     font-size: 3.6rem;
-    margin: 15px 0;
+    margin: 20px 0;
+    text-transform: capitalize;
+    font-weight: 900;
+    color: #FFCB05;
+    text-shadow:
+        3px 3px 0 #2C72B8,
+        -3px -3px 0 #2C72B8,
+        3px -3px 0 #2C72B8,
+        -3px 3px 0 #2C72B8,
+        3px 3px 0 #2C72B8;
+}
+
+.typesStyle {
+
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.typesStyle p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #AB00AE;
+    margin-top: 20px;
+    height: 35px;
+    width: 120px;
+    text-transform: uppercase;
 }
