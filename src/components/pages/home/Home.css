@@ -1,0 +1,44 @@
+.mainHome{
+    background: linear-gradient(40deg,#dfebed, #7ABDBD);
+    /* background-image: url('../../../img/background-unsplash.jpeg'); */
+    background-size: 450px 950px;
+    background-attachment: fixed;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+}
+
+.imgAndCards {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgHome {
+    width: 60%;
+    margin: 5vh 0 0 0;
+}
+
+.imgBalls {
+    width: 30%;
+    margin-bottom: 7vh;
+}
+
+.cardsHome {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media ( min-width: 768px ) {
+    
+    .mainHome {
+        background-size: 550px 950px;
+        width: 40vw;
+        margin: 10vh auto;
+        border-radius: 20px;
+    }
+}
