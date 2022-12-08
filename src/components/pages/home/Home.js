@@ -1,6 +1,9 @@
 import './Home.css';
 import React, { useState, useEffect } from 'react';
 import PokeCard from '../../../components/pokemoncard/PokeCard';
+import Logo from '../../../img/image 1.png';
+import Balls from '../../../img/LogoMakr.png';
+import Background from '../../../img/background-unsplash.jpeg';
 
 
 function Home() {
@@ -22,15 +25,19 @@ function Home() {
     }, []);
 
     return (
-        <main>
-            <div>
-                {
-                    allPokemon.map((item, index) => {
-                        return (
-                            <PokeCard key={index} url={item.url} />
-                        );
-                    })
-                }
+        <main className='mainHome'>
+            <div className='imgAndCards'>
+                <img className='imgHome' src={Logo} alt='Logo' />
+                <img className='imgBalls' src={Balls} />
+                <div className='cardsHome'>
+                    {
+                        allPokemon.map((item, index) => {
+                            return (
+                                <PokeCard key={index} url={item.url} />
+                            );
+                        })
+                    }
+                </div>
             </div>
         </main>
 

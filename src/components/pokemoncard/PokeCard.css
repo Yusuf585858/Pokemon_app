@@ -1,8 +1,9 @@
 .pokeCardDiv {
     width: 40vw;
-    background: linear-gradient(50deg, white, #FCCD13);
-    margin-bottom: 10px;
+    background-image: linear-gradient(25.41deg, #FFE1C6 4.87%, #010D90 94.37%);
+    margin-bottom: 20px;
     border-radius: 10px;
+    /* box-shadow: 1px 1px 10px rgb(62, 211, 189); */
 }
 
 .pokeCardImg {
@@ -10,7 +11,7 @@
 }
 
 .pokeNameAndPokedex {
-    background-color: red;
+    background-color: white;
     padding-bottom: 9%;
     display: flex;
     justify-content: space-around;
@@ -18,7 +19,20 @@
     border-bottom-right-radius: 10px;
 }
 
-.pokeNameAndPokedex p,
-.pokeNameAndPokedex h1 {
+.pokeCardP {
     margin-top: 7%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+@media ( min-width: 768px ) {
+    
+    .pokeCardDiv {
+        width: 30%;
+    }
+
+    .pokeCardP {
+        font-size: .8rem;
+    }
 }
