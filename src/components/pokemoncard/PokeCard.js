@@ -27,7 +27,9 @@ function PokeCard(props) {
                 <p className='pokeCardP'>#{pokemon?.id}</p>
                 <h1 className='pokecardHeading'>{pokemon?.name}</h1>
             </div>
+            {/* <Link to={{ pathname: '/Type', search: `?url=${props.url}` }} state={props.url}><button>To Types</button></Link> */}
         </div>
+
     );
 
 }

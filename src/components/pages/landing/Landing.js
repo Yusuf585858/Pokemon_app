@@ -31,9 +31,10 @@ function Landing() {
                 <input onChange={(e) => setSearch(e.target.value)} placeholder="search"></input>
                 <button onClick={() => { setApi(`https://pokeapi.co/api/v2/pokemon/${search}`); }}>Search</button>
                 <Link to={'/home'}><button>Show all pokemons</button></Link>
+                <Link to={'/TypeOG'}><button>Show me Types</button></Link>
             </div>
             <div>
-                <img src={allPokemon?.sprites?.front_default} ></img>
+                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${allPokemon?.id}.png`} ></img>
                 <p>{allPokemon?.id}</p>
                 <h1>{allPokemon?.name}</h1>
             </div>
